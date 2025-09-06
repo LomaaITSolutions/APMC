@@ -10,7 +10,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import apmcLogo from "@/assets/apmc-logo.png";
+import apmcLogo from "../../public/favicon.ico";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -47,12 +47,14 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3">
               <img src={apmcLogo} alt="APMC Logo" className="w-12 h-12 object-contain" />
-              <div>
+              <div className="items-center">
                 <h1 className="text-xl font-bold text-primary">
-                  ANDHRA PRADESH MEDICAL COUNCIL - Regulating Medical Practice Since 1956
+                  ANDHRA PRADESH MEDICAL COUNCIL
                 </h1>
+                <p className="text-sm font-bold"> Regulating Medical Practice Since 1956</p>
               </div>
             </div>
+            
           </div>
 
           {/* Navigation */}

@@ -12,6 +12,7 @@ import {
   ExternalLink,
   Send
 } from "lucide-react";
+import apmcLogo from "../../public/favicon.ico";
 
 const Footer = () => {
   return (
@@ -24,7 +25,8 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-primary font-bold text-xl">
-                AP
+              <img src={apmcLogo} alt="APMC Logo" className="w-12 h-12 rounded-full object-contain" />
+
               </div>
               <div>
                 <h3 className="font-bold text-lg">APMC</h3>
