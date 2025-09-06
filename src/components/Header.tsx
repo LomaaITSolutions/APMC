@@ -1,8 +1,15 @@
 import { Button } from "@/components/ui/button";
-import { Menu, Phone, Mail, Search } from "lucide-react";
+import { Menu, Phone, Mail, Search, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useNavigate } from "react-router-dom";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -34,7 +41,7 @@ const Header = () => {
 
       {/* Main Header */}
       <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-4">
           {/* Logo & Title */}
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3">
@@ -43,46 +50,115 @@ const Header = () => {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-primary">
-                  ANDHRA PRADESH MEDICAL COUNCIL
+                  ANDHRA PRADESH MEDICAL COUNCIL - Regulating Medical Practice Since 1956
                 </h1>
-                <p className="text-sm text-muted-foreground">
-                  Regulating Medical Practice Since 1956
-                </p>
               </div>
             </div>
           </div>
 
-          <nav className="hidden lg:flex items-center gap-6">
-            <Button variant="ghost" className="hover:text-primary" onClick={() => navigate('/')}>Home</Button>
-            <Button variant="ghost" className="hover:text-primary" onClick={() => navigate('/about')}>About</Button>
-            <Button variant="ghost" className="hover:text-primary" onClick={() => navigate('/services')}>Services</Button>
-            <Button variant="ghost" className="hover:text-primary" onClick={() => navigate('/downloads')}>Downloads</Button>
-            <Button variant="ghost" className="hover:text-primary" onClick={() => navigate('/contact')}>Contact</Button>
-          </nav>
+          {/* Navigation */}
+          <div className="flex items-center justify-between">
+            <NavigationMenu className="hidden lg:flex">
+              <NavigationMenuList className="gap-2">
+                <NavigationMenuItem>
+                  <Button variant="ghost" className="hover:text-primary" onClick={() => navigate('/')}>Home</Button>
+                </NavigationMenuItem>
+                
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="hover:text-primary">CME</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="w-80 p-4">
+                      <div className="grid gap-2">
+                        <Button variant="ghost" className="justify-start" onClick={() => navigate('/cme/registration')}>
+                          CME Registration
+                        </Button>
+                        <Button variant="ghost" className="justify-start" onClick={() => navigate('/cme/programmes')}>
+                          Upcoming CME Programmes
+                        </Button>
+                        <Button variant="ghost" className="justify-start" onClick={() => navigate('/cme/instructions')}>
+                          Instructions
+                        </Button>
+                      </div>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
 
-          {/* Search & Mobile Menu */}
-          <div className="flex items-center gap-3">
-            <div className="hidden md:flex items-center gap-2 max-w-xs">
-              <Input 
-                placeholder="Search registration..." 
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && navigate(`/verify?q=${encodeURIComponent(query)}`)}
-                className="w-full"
-              />
-              <Button size="sm" variant="outline" onClick={() => navigate(`/verify?q=${encodeURIComponent(query)}`)}>
-                <Search className="h-4 w-4" />
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="hover:text-primary">NRI Services</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="w-80 p-4">
+                      <div className="grid gap-2">
+                        <Button variant="ghost" className="justify-start" onClick={() => navigate('/nri/in-absentia-registration')}>
+                          IN ABSENTIA Registration
+                        </Button>
+                        <Button variant="ghost" className="justify-start" onClick={() => navigate('/nri/affidavit-proforma')}>
+                          IN ABSENTIA Affidavit Proforma
+                        </Button>
+                        <Button variant="ghost" className="justify-start" onClick={() => navigate('/nri/good-standing-certificate')}>
+                          NMC Good Standing Certificate
+                        </Button>
+                        <Button variant="ghost" className="justify-start" onClick={() => navigate('/nri/temporary-permission')}>
+                          Temporary Permission for Foreign/Outside State visiting Doctors
+                        </Button>
+                      </div>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <Button variant="ghost" className="hover:text-primary" onClick={() => navigate('/gallery')}>Gallery</Button>
+                </NavigationMenuItem>
+                
+                <NavigationMenuItem>
+                  <Button variant="ghost" className="hover:text-primary" onClick={() => navigate('/faq')}>FAQ</Button>
+                </NavigationMenuItem>
+                
+                <NavigationMenuItem>
+                  <Button variant="ghost" className="hover:text-primary" onClick={() => navigate('/constitution')}>Constitution</Button>
+                </NavigationMenuItem>
+                
+                <NavigationMenuItem>
+                  <Button variant="ghost" className="hover:text-primary" onClick={() => navigate('/acts-rules')}>Acts/Rules</Button>
+                </NavigationMenuItem>
+                
+                <NavigationMenuItem>
+                  <Button variant="ghost" className="hover:text-primary" onClick={() => navigate('/meetings-decisions')}>Meetings and Decisions</Button>
+                </NavigationMenuItem>
+                
+                <NavigationMenuItem>
+                  <Button variant="ghost" className="hover:text-primary" onClick={() => navigate('/downloads')}>Downloads</Button>
+                </NavigationMenuItem>
+                
+                <NavigationMenuItem>
+                  <Button variant="ghost" className="hover:text-primary" onClick={() => navigate('/contact')}>Contact</Button>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+
+            {/* Search & Mobile Menu */}
+            <div className="flex items-center gap-3">
+              <div className="hidden md:flex items-center gap-2 max-w-xs">
+                <Input 
+                  placeholder="Search registration..." 
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && navigate(`/verify?q=${encodeURIComponent(query)}`)}
+                  className="w-full"
+                />
+                <Button size="sm" variant="outline" onClick={() => navigate(`/verify?q=${encodeURIComponent(query)}`)}>
+                  <Search className="h-4 w-4" />
+                </Button>
+              </div>
+              
+              <Button
+                variant="outline"
+                size="sm"
+                className="lg:hidden"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                <Menu className="h-4 w-4" />
               </Button>
             </div>
-            
-            <Button
-              variant="outline"
-              size="sm"
-              className="lg:hidden"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              <Menu className="h-4 w-4" />
-            </Button>
           </div>
         </div>
 
@@ -91,8 +167,45 @@ const Header = () => {
           <div className="lg:hidden mt-4 p-4 bg-accent rounded-lg">
             <nav className="flex flex-col gap-2">
               <Button variant="ghost" className="justify-start" onClick={() => navigate('/')}>Home</Button>
-              <Button variant="ghost" className="justify-start" onClick={() => navigate('/about')}>About</Button>
-              <Button variant="ghost" className="justify-start" onClick={() => navigate('/services')}>Services</Button>
+              
+              <div className="pl-4">
+                <p className="text-sm font-medium text-muted-foreground mb-2">CME</p>
+                <div className="flex flex-col gap-1 pl-4">
+                  <Button variant="ghost" className="justify-start text-sm" onClick={() => navigate('/cme/registration')}>
+                    CME Registration
+                  </Button>
+                  <Button variant="ghost" className="justify-start text-sm" onClick={() => navigate('/cme/programmes')}>
+                    Upcoming CME Programmes
+                  </Button>
+                  <Button variant="ghost" className="justify-start text-sm" onClick={() => navigate('/cme/instructions')}>
+                    Instructions
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="pl-4">
+                <p className="text-sm font-medium text-muted-foreground mb-2">NRI Services</p>
+                <div className="flex flex-col gap-1 pl-4">
+                  <Button variant="ghost" className="justify-start text-sm" onClick={() => navigate('/nri/in-absentia-registration')}>
+                    IN ABSENTIA Registration
+                  </Button>
+                  <Button variant="ghost" className="justify-start text-sm" onClick={() => navigate('/nri/affidavit-proforma')}>
+                    IN ABSENTIA Affidavit Proforma
+                  </Button>
+                  <Button variant="ghost" className="justify-start text-sm" onClick={() => navigate('/nri/good-standing-certificate')}>
+                    NMC Good Standing Certificate
+                  </Button>
+                  <Button variant="ghost" className="justify-start text-sm" onClick={() => navigate('/nri/temporary-permission')}>
+                    Temporary Permission for Foreign/Outside State visiting Doctors
+                  </Button>
+                </div>
+              </div>
+              
+              <Button variant="ghost" className="justify-start" onClick={() => navigate('/gallery')}>Gallery</Button>
+              <Button variant="ghost" className="justify-start" onClick={() => navigate('/faq')}>FAQ</Button>
+              <Button variant="ghost" className="justify-start" onClick={() => navigate('/constitution')}>Constitution</Button>
+              <Button variant="ghost" className="justify-start" onClick={() => navigate('/acts-rules')}>Acts/Rules</Button>
+              <Button variant="ghost" className="justify-start" onClick={() => navigate('/meetings-decisions')}>Meetings and Decisions</Button>
               <Button variant="ghost" className="justify-start" onClick={() => navigate('/downloads')}>Downloads</Button>
               <Button variant="ghost" className="justify-start" onClick={() => navigate('/contact')}>Contact</Button>
             </nav>
