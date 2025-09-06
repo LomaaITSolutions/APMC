@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Menu, Phone, Mail, Search, ChevronDown } from "lucide-react";
+import { Menu, Phone, Mail, Search, ChevronDown, Settings, Eye, FileSearch } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useNavigate } from "react-router-dom";
@@ -10,6 +10,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import apmcLogo from "@/assets/apmc-logo.png";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -45,9 +46,7 @@ const Header = () => {
           {/* Logo & Title */}
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                AP
-              </div>
+              <img src={apmcLogo} alt="APMC Logo" className="w-12 h-12 object-contain" />
               <div>
                 <h1 className="text-xl font-bold text-primary">
                   ANDHRA PRADESH MEDICAL COUNCIL - Regulating Medical Practice Since 1956
@@ -100,8 +99,49 @@ const Header = () => {
                         <Button variant="ghost" className="justify-start" onClick={() => navigate('/nri/temporary-permission')}>
                           Temporary Permission for Foreign/Outside State visiting Doctors
                         </Button>
-                      </div>
-                    </div>
+          </div>
+        </div>
+        
+        {/* Service Buttons */}
+        <div className="bg-gradient-to-r from-green-500 to-teal-600 py-8">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+              <Button 
+                size="lg" 
+                className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full shadow-lg"
+                onClick={() => {
+                  navigate('/services');
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                <Settings className="mr-2 h-5 w-5" />
+                Online Services
+              </Button>
+              <Button 
+                size="lg" 
+                className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full shadow-lg"
+                onClick={() => {
+                  navigate('/booking');
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                <Eye className="mr-2 h-5 w-5" />
+                Online Slot Booking
+              </Button>
+              <Button 
+                size="lg" 
+                className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full shadow-lg"
+                onClick={() => {
+                  navigate('/verify');
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                <FileSearch className="mr-2 h-5 w-5" />
+                Search Medical Register
+              </Button>
+            </div>
+          </div>
+        </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
