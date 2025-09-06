@@ -9,11 +9,6 @@ const ServiceButtons = () => {
   return (
     <div className="bg-white py-8">
       <div className="container mx-auto px-4">
-        {/* Logo */}
-        <div className="flex justify-center mb-6">
-          <img src={apmcLogo} alt="APMC Official Logo" className="w-20 h-20 object-contain" />
-        </div>
-        
         {/* Service Buttons */}
         <div className="flex flex-wrap justify-center gap-4 md:gap-6">
           <Button 
