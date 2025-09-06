@@ -1,13 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Settings, Eye, FileSearch } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import apmcLogo from "@/assets/apmc-logo.png";
 
 const ServiceButtons = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-gradient-to-r from-green-500 to-teal-600 py-8">
+    <div className="bg-white py-8">
       <div className="container mx-auto px-4">
+        {/* Logo */}
+        <div className="flex justify-center mb-6">
+          <img src={apmcLogo} alt="APMC Official Logo" className="w-20 h-20 object-contain" />
+        </div>
+        
+        {/* Service Buttons */}
         <div className="flex flex-wrap justify-center gap-4 md:gap-6">
           <Button 
             size="lg" 
