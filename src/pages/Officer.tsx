@@ -83,6 +83,7 @@ const Sidebar = () => {
 const CommitteeMembers = () => {
   const executiveMembers = [
     { name: "Dr. Daggumati Sreehari Rao", role: "Chairman", img: "/chairman.jpg" },
+    { name: "Dr. Ramesh Idimadakala", role: "Registrar", img: "/registrar.jpg" },
     { name: "Dr. Gogineni Sujatha", role: "Vice-Chairman", img: "https://ui-avatars.com/api/?name=Gogineni+Sujatha&background=E5E7EB&color=374151&size=128" },
     { name: "Dr. TVVP", role: "Commissioner & Member", img: "https://ui-avatars.com/api/?name=TVVP+Commissioner&background=E5E7EB&color=374151&size=128" },
     { name: "Dr. Kalavakallu Venkata Subha Naidu", role: "Professor", img: "https://ui-avatars.com/api/?name=Kalavakallu+Venkata+Subha+Naidu&background=E5E7EB&color=374151&size=128" },
