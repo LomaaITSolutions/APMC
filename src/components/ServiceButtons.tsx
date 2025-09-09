@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Settings, Eye, FileSearch } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import apmcLogo from "@/assets/apmc-logo.png";
 
 const ServiceButtons = () => {
   const navigate = useNavigate();
@@ -14,23 +13,25 @@ const ServiceButtons = () => {
           <Button 
             size="lg" 
             className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full shadow-lg"
-            onClick={() => navigate('/services')}
+            onClick={() => navigate("/services")}
           >
             <Settings className="mr-2 h-5 w-5" />
             Online Services
           </Button>
+
           <Button 
             size="lg" 
             className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full shadow-lg"
-            onClick={() => navigate('/booking')}
+            onClick={() => navigate("/slot-booking")}
           >
             <Eye className="mr-2 h-5 w-5" />
             Online Slot Booking
           </Button>
+
           <Button 
             size="lg" 
             className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full shadow-lg"
-            onClick={() => navigate('/verify')}
+            onClick={() => navigate("/verify")}
           >
             <FileSearch className="mr-2 h-5 w-5" />
             Search Medical Register
