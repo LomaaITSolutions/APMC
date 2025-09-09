@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Shield, FileCheck, Calendar } from "lucide-react";
+import { ArrowRight, Shield, FileCheck, Calendar, ShieldCheck } from "lucide-react";
 import heroImage from "@/assets/hero-medical.jpg";
 import { useNavigate } from "react-router-dom";
 
@@ -70,22 +70,6 @@ const Hero = () => {
           </div>
 
           <div className="space-y-4">
-            <Card className="p-6 bg-white/95 backdrop-blur shadow-medical hover:shadow-lg transition-all hover:scale-105">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
-                  <Shield className="h-6 w-6 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-semibold text-lg mb-1">License Verification</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Instantly verify medical professional credentials
-                  </p>
-                </div>
-                <Button variant="ghost" size="sm" onClick={() => (window.location.pathname = '/verify')}>
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </div>
-            </Card>
 
             <Card className="p-6 bg-white/95 backdrop-blur shadow-medical hover:shadow-lg transition-all hover:scale-105">
               <div className="flex items-center gap-4">
@@ -116,6 +100,23 @@ const Hero = () => {
                   </p>
                 </div>
                 <Button variant="ghost" size="sm" onClick={() => (window.location.pathname = '/renewal')}>
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </div>
+            </Card>
+
+            <Card className="p-6 bg-white/95 backdrop-blur shadow-medical hover:shadow-lg transition-all hover:scale-105">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
+                  <ShieldCheck className="h-6 w-6 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold text-lg mb-1">Apply for NOC</h3>
+                  <p className="text-muted-foreground text-sm">
+                    No Objection Certificate for various medical purposes and transfers.
+                  </p>
+                </div>
+                <Button variant="ghost" size="sm" onClick={() => (window.location.pathname = '/verify')}>
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </div>
