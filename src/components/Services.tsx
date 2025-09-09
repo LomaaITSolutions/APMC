@@ -12,7 +12,8 @@ import {
   CreditCard,
   Phone,
   CheckCircle,
-    User,LogIn
+  User,
+  LogIn,
 } from "lucide-react";
 
 const Services: React.FC = () => {
@@ -63,7 +64,8 @@ const Services: React.FC = () => {
 
   const newsItems = [
     {
-      title: "New Digital Registration System Launched for Medical Practitioners",
+      title:
+        "New Digital Registration System Launched for Medical Practitioners",
       excerpt:
         "The AP Medical Council has introduced a streamlined online registration system that reduces processing time and improves transparency for new medical license applications.",
       date: "2025-01-15",
@@ -120,109 +122,115 @@ const Services: React.FC = () => {
       Education: "bg-orange-100 text-orange-800",
       Regulation: "bg-purple-100 text-purple-800",
     };
-    return colors[category as keyof typeof colors] || "bg-gray-100 text-gray-800";
+    return (
+      colors[category as keyof typeof colors] || "bg-gray-100 text-gray-800"
+    );
   };
 
   return (
     <>
       {/* Navigation */}
-<header className="w-full bg-white border-b border-gray-200">
-      {/* Top Line */}
-      <div className="text-sm text-gray-600 text-white px-6 py-2 bg-teal-700 border-b border-gray-200">
-        Government of Andhra Pradesh | Department of Health, Medical & Family Welfare
-      </div>
-
-      {/* Main Navbar */}
-      <div className="flex items-center justify-between px-6 py-4">
-        {/* Left: Logo + Title */}
-        <div className="flex items-center space-x-3">
-          <div className="w-12 h-12 flex items-center justify-center rounded-full bg-teal-700 text-white font-bold text-lg">
-            AP
-          </div>
-          <div>
-            <h1 className="text-lg font-bold text-gray-900">AP Medical Council</h1>
-            <p className="text-sm text-gray-600">
-              Andhra Pradesh Medical Council
-            </p>
-          </div>
+      <header className="w-full bg-white border-b border-gray-200">
+        {/* Top Line */}
+        <div className="text-sm text-gray-600 text-white px-6 py-2 bg-teal-700 border-b border-gray-200">
+          Government of Andhra Pradesh | Department of Health, Medical & Family
+          Welfare
         </div>
 
-        {/* Center: Navigation */}
-<nav className="hidden md:flex space-x-8  font-bold text-gray-700 font-medium">
-  <a href="/" className="hover:text-teal-700">
-    Home
-  </a>
+        {/* Main Navbar */}
+        <div className="flex items-center justify-between px-6 py-4">
+          {/* Left: Logo + Title */}
+          <div className="flex items-center space-x-3">
+            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-teal-700 text-white font-bold text-lg">
+              AP
+            </div>
+            <div>
+              <h1 className="text-lg font-bold text-gray-900">
+                AP Medical Council
+              </h1>
+              <p className="text-sm text-gray-600">
+                Andhra Pradesh Medical Council
+              </p>
+            </div>
+          </div>
 
-  {/* Final Registration Dropdown */}
-  <div className="relative group">
-    <button className="hover:text-teal-700 flex items-center">
-      Final Registration
-      <svg
-        className="ml-1 w-4 h-4"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M19 9l-7 7-7-7"
-        />
-      </svg>
-    </button>
+          {/* Center: Navigation */}
+          <nav className="hidden md:flex space-x-8  font-bold text-gray-700 font-medium">
+            <a href="/" className="hover:text-teal-700">
+              Home
+            </a>
 
-    {/* Dropdown Menu */}
-    <div className="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg 
+            {/* Final Registration Dropdown */}
+            <div className="relative group">
+              <button className="hover:text-teal-700 flex items-center">
+                Final Registration
+                <svg
+                  className="ml-1 w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+
+              {/* Dropdown Menu */}
+              <div
+                className="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg 
                     opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-                    transition duration-200 z-50">
-      <ul className="py-2 text-gray-700">
-        <li>
-          <a
-            href="/registration/ap"
-            className="block px-4 py-2 hover:bg-gray-100"
-          >
-            M.B.B.S Studied in Andhra Pradesh
-          </a>
-        </li>
-        <li>
-          <a
-            href="/registration/other-state"
-            className="block px-4 py-2 hover:bg-gray-100"
-          >
-            M.B.B.S Studied in Other State
-          </a>
-        </li>
-        <li>
-          <a
-            href="/registration/foreign"
-            className="block px-4 py-2 hover:bg-gray-100"
-          >
-            M.B.B.S Studied in Other Country (FMGs)
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
+                    transition duration-200 z-50"
+              >
+                <ul className="py-2 text-gray-700">
+                  <li>
+                    <a
+                      href="/registration/ap"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      M.B.B.S Studied in Andhra Pradesh
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/registration/other-state"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      M.B.B.S Studied in Other State
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/registration/foreign"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      M.B.B.S Studied in Other Country (FMGs)
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
 
-  <a href="/services" className="hover:text-teal-700">
-    Search Medical Register
-  </a>
-</nav>
+            <a href="/services" className="hover:text-teal-700">
+              Search Medical Register
+            </a>
+          </nav>
 
-        {/* Right: Icons + Login */}
-        <div className="flex items-center space-x-4">
-         
-          <button className="bg-teal-700 text-white px-4 py-2 rounded-md font-medium hover:bg-teal-800 transition-colors">
-            Doctor Signup
-          </button>
+          {/* Right: Icons + Login */}
+          <div className="flex items-center space-x-4">
+            <button className="bg-teal-700 text-white px-4 py-2 rounded-md font-medium hover:bg-teal-800 transition-colors">
+              Doctor Signup
+            </button>
 
-          <button className="bg-teal-700 text-white px-4 py-2 rounded-md font-medium hover:bg-teal-800 transition-colors">
-            Doctor Login
-          </button>
+            <button className="bg-teal-700 text-white px-4 py-2 rounded-md font-medium hover:bg-teal-800 transition-colors">
+              Doctor Login
+            </button>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-teal-700 to-teal-600 text-white py-16">
@@ -286,7 +294,9 @@ const Services: React.FC = () => {
       <section id="services" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Services
+            </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Comprehensive services for medical practitioners, healthcare
               institutions, and the public
@@ -393,135 +403,140 @@ const Services: React.FC = () => {
               </article>
             ))}
           </div>
-
-         </div>
-      </section>
-<section className="py-16 bg-gray-50">
-  <div className="max-w-7xl mx-auto px-6">
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
-      {/* Final Registration */}
-      <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[400px]">
-        <div className="bg-teal-700 text-white p-4 flex items-center gap-3">
-          <User size={24} />
-          <h2 className="text-lg font-semibold">
-            Procedure for Final Registration (PR)
-          </h2>
         </div>
-        {/* Scrollable Content */}
-        <div className="flex-1 overflow-y-auto p-6 scrollbar-thin scrollbar-thumb-teal-700 scrollbar-track-gray-100">
-          <div className="space-y-4">
-            <div className="flex items-start gap-3">
-              <div className="w-4 h-4 border-2 border-gray-400 rounded-full mt-1"></div>
-              <p className="text-gray-800 font-medium">
-                Filled in Online Registration Form.
-              </p>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-4 h-4 border-2 border-gray-400 rounded-full mt-1"></div>
-              <p className="text-gray-800 font-medium">Payment for Id Card.</p>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-4 h-4 border-2 border-gray-400 rounded-full mt-1"></div>
-              <p className="text-gray-800 font-medium">Upload Enclosures.</p>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-4 h-4 border-2 border-gray-400 rounded-full mt-1"></div>
-              <p className="text-gray-800 font-medium">Slot Booking.</p>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-4 h-4 border-2 border-gray-400 rounded-full mt-1"></div>
-              <div>
-                <p className="text-gray-800 font-medium">Check Details.</p>
-                <p className="text-blue-600 text-sm mt-1">
-                  Know your Acknowledgement Id, Status & Slot Id.
-                </p>
+      </section>
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+            {/* Final Registration */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[400px]">
+              <div className="bg-teal-700 text-white p-4 flex items-center gap-3">
+                <User size={24} />
+                <h2 className="text-lg font-semibold">
+                  Procedure for Final Registration (PR)
+                </h2>
+              </div>
+              {/* Scrollable Content */}
+              <div className="flex-1 overflow-y-auto p-6 scrollbar-thin scrollbar-thumb-teal-700 scrollbar-track-gray-100">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-4 h-4 border-2 border-gray-400 rounded-full mt-1"></div>
+                    <p className="text-gray-800 font-medium">
+                      Filled in Online Registration Form.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-4 h-4 border-2 border-gray-400 rounded-full mt-1"></div>
+                    <p className="text-gray-800 font-medium">
+                      Payment for Id Card.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-4 h-4 border-2 border-gray-400 rounded-full mt-1"></div>
+                    <p className="text-gray-800 font-medium">
+                      Upload Enclosures.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-4 h-4 border-2 border-gray-400 rounded-full mt-1"></div>
+                    <p className="text-gray-800 font-medium">Slot Booking.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-4 h-4 border-2 border-gray-400 rounded-full mt-1"></div>
+                    <div>
+                      <p className="text-gray-800 font-medium">
+                        Check Details.
+                      </p>
+                      <p className="text-blue-600 text-sm mt-1">
+                        Know your Acknowledgement Id, Status & Slot Id.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-4 h-4 border-2 border-gray-400 rounded-full mt-1"></div>
+                    <p className="text-gray-800 font-medium">
+                      Id Card will be sent through the registered post along
+                      with the final registration certificate.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6 border-t space-y-3">
+                <button className="w-full border  text-black py-2 px-4 rounded hover:bg-teal-400">
+                  M.B.B.S Studied in Andhra Pradesh
+                </button>
+                <button className="w-full bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600">
+                  M.B.B.S Studied in Other State
+                </button>
+                <button className="w-full bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
+                  M.B.B.S Studied in Other Country (FMGs)
+                </button>
               </div>
             </div>
-            <div className="flex items-start gap-3">
-              <div className="w-4 h-4 border-2 border-gray-400 rounded-full mt-1"></div>
-              <p className="text-gray-800 font-medium">
-                Id Card will be sent through the registered post along with the
-                final registration certificate.
-              </p>
+
+            {/* Profile Registration (Reference Height) */}
+
+            <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[400px]">
+              <div className="bg-teal-700 text-white p-4 flex items-center gap-3">
+                <Users size={24} />
+                <h2 className="text-lg font-semibold">
+                  Procedure for Profile Registration
+                </h2>
+              </div>
+              <div className="flex-1 overflow-y-auto p-6 scrollbar-thin scrollbar-thumb-teal-700 scrollbar-track-gray-100">
+                {[
+                  "Payment for Id Card.",
+                  "Upload Enclosures.",
+                  "Slot Booking.",
+                  "Check Details.",
+                  "Id Card will be sent via post.",
+                ].map((step, idx) => (
+                  <div key={idx} className="flex items-start gap-3">
+                    <div className="w-4 h-4 border-2 border-gray-400 rounded-full mt-1"></div>
+                    <p className="text-gray-800 font-medium">{step}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="p-6 border-t">
+                <button className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+                  Apply
+                </button>
+              </div>
+            </div>
+
+            {/* eDoctor */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[400px]">
+              <div className="bg-teal-700 text-white p-4 flex items-center gap-3">
+                <LogIn size={24} />
+                <h2 className="text-lg font-semibold">Procedure for eDoctor</h2>
+              </div>
+              <div className="flex-1 overflow-y-auto p-6 scrollbar-thin scrollbar-thumb-teal-700 scrollbar-track-gray-100">
+                {[
+                  "Login via APMC eDoctor with Username, Captcha & OTP.",
+                  "Apply for required Services (Good Standing, NOC, Renewal & Duplicate).",
+                  "Upload required enclosures based on service.",
+                  "Payment for applied service.",
+                  "Subject to Verification from APMC.",
+                  "Re Apply.",
+                  "If any corrections occured in application, it will be rejected.",
+                  "The Rejected Application must be Reapply with suggested corrections.",
+                  "Certificate Generation.",
+                ].map((step, idx) => (
+                  <div key={idx} className="flex items-start gap-3">
+                    <div className="w-4 h-4 border-2 border-gray-400 rounded-full mt-1"></div>
+                    <p className="text-gray-800 font-medium">{step}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="p-6 border-t">
+                <button className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+                  Apply
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        <div className="p-6 border-t space-y-3">
-          <button className="w-full border  text-black py-2 px-4 rounded hover:bg-teal-400">
-            M.B.B.S Studied in Andhra Pradesh
-          </button>
-          <button className="w-full bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600">
-            M.B.B.S Studied in Other State
-          </button>
-          <button className="w-full bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
-            M.B.B.S Studied in Other Country (FMGs)
-          </button>
-        </div>
-      </div>
-
-      {/* Profile Registration (Reference Height) */}
-      
-      <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[400px]">
-        <div className="bg-teal-700 text-white p-4 flex items-center gap-3">
-          <Users size={24} />
-          <h2 className="text-lg font-semibold">
-            Procedure for Profile Registration
-          </h2>
-        </div>
-        <div className="flex-1 overflow-y-auto p-6 scrollbar-thin scrollbar-thumb-teal-700 scrollbar-track-gray-100">
-          {[
-            "Payment for Id Card.",
-            "Upload Enclosures.",
-            "Slot Booking.",
-            "Check Details.",
-            "Id Card will be sent via post.",
-          ].map((step, idx) => (
-            <div key={idx} className="flex items-start gap-3">
-              <div className="w-4 h-4 border-2 border-gray-400 rounded-full mt-1"></div>
-              <p className="text-gray-800 font-medium">{step}</p>
-            </div>
-          ))}
-        </div>
-        <div className="p-6 border-t">
-          <button className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
-            Apply
-          </button>
-        </div>
-      </div>
-
-      {/* eDoctor */}
-      <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[400px]">
-        <div className="bg-teal-700 text-white p-4 flex items-center gap-3">
-          <LogIn size={24} />
-          <h2 className="text-lg font-semibold">Procedure for eDoctor</h2>
-        </div>
-        <div className="flex-1 overflow-y-auto p-6 scrollbar-thin scrollbar-thumb-teal-700 scrollbar-track-gray-100">
-          {[
-            "Login via APMC eDoctor with Username, Captcha & OTP.",
-            "Apply for required Services (Good Standing, NOC, Renewal & Duplicate).",
-            "Upload required enclosures based on service.",
-            "Payment for applied service.",
-            "Subject to Verification from APMC.",
-            "Re Apply.",
-            "If any corrections occured in application, it will be rejected.",
-            "The Rejected Application must be Reapply with suggested corrections.",
-            "Certificate Generation.",
-          ].map((step, idx) => (
-            <div key={idx} className="flex items-start gap-3">
-              <div className="w-4 h-4 border-2 border-gray-400 rounded-full mt-1"></div>
-              <p className="text-gray-800 font-medium">{step}</p>
-            </div>
-          ))}
-        </div>
-        <div className="p-6 border-t">
-          <button className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
-            Apply
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
     </>
   );
 };

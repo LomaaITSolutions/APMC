@@ -2,15 +2,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Search, 
-  FileText, 
-  Bell, 
+import {
+  Search,
+  FileText,
+  Bell,
   Calendar,
   ExternalLink,
   Download,
   Phone,
-  Clock
+  Clock,
 } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -26,16 +26,16 @@ const QuickActions = () => {
       toast({
         title: "Please enter a registration number",
         description: "Enter a valid registration number to search",
-        variant: "destructive"
+        variant: "destructive",
       });
       return;
     }
-    
+
     toast({
       title: "Searching...",
       description: `Looking up registration: ${searchQuery}`,
     });
-    
+
     // Simulate search functionality
     setTimeout(() => {
       toast({
@@ -50,20 +50,20 @@ const QuickActions = () => {
       title: "District-level Registration Services Launched",
       date: "2024-01-15",
       type: "New Service",
-      urgent: false
+      urgent: false,
     },
     {
       title: "CME Credit Requirements Updated",
-      date: "2024-01-10", 
+      date: "2024-01-10",
       type: "Important",
-      urgent: true
+      urgent: true,
     },
     {
       title: "Foreign Medical Graduate Guidelines Revised",
       date: "2024-01-05",
       type: "Update",
-      urgent: false
-    }
+      urgent: false,
+    },
   ];
 
   const quickLinks = [
@@ -72,14 +72,13 @@ const QuickActions = () => {
     { title: "Guidelines & Rules", icon: Download, url: "/downloads" },
     { title: "Contact Directory", icon: Phone, url: "/contact" },
     { title: "Office Hours", icon: Clock, url: "/contact" },
-    { title: "Complaint Portal", icon: ExternalLink, url: "/contact" }
+    { title: "Complaint Portal", icon: ExternalLink, url: "/contact" },
   ];
 
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-3 gap-8">
-          
           {/* Quick Search */}
           <div className="lg:col-span-1">
             <Card className="shadow-card-custom">
@@ -97,10 +96,10 @@ const QuickActions = () => {
                       placeholder="Enter registration number (e.g., APMC/12345)"
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
+                      onKeyPress={(e) => e.key === "Enter" && handleSearch()}
                     />
                   </div>
-                  <Button 
+                  <Button
                     onClick={handleSearch}
                     className="w-full shadow-button-custom hover:scale-105 transition-all"
                   >
@@ -161,7 +160,9 @@ const QuickActions = () => {
                       <div className="flex-1">
                         <div className="flex items-start justify-between gap-4">
                           <div>
-                            <h4 className="font-medium mb-1">{announcement.title}</h4>
+                            <h4 className="font-medium mb-1">
+                              {announcement.title}
+                            </h4>
                             <div className="flex items-center gap-2 text-sm text-muted-foreground">
                               <Calendar className="h-4 w-4" />
                               <span>{announcement.date}</span>
@@ -189,7 +190,7 @@ const QuickActions = () => {
                     <div>
                       <h4 className="font-medium mb-1">Stay Updated</h4>
                       <p className="text-sm text-muted-foreground">
-                        Subscribe to get notifications about important updates, 
+                        Subscribe to get notifications about important updates,
                         new services, and regulatory changes.
                       </p>
                       <Button size="sm" className="mt-3">

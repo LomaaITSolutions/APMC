@@ -10,8 +10,8 @@ const ServiceButtons = () => {
       <div className="container mx-auto px-4">
         {/* Service Buttons */}
         <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full shadow-lg"
             onClick={() => navigate("/services")}
           >
@@ -19,8 +19,8 @@ const ServiceButtons = () => {
             Online Services
           </Button>
 
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full shadow-lg"
             onClick={() => navigate("/slot-booking")}
           >
@@ -28,8 +28,8 @@ const ServiceButtons = () => {
             Online Slot Booking
           </Button>
 
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full shadow-lg"
             onClick={() => navigate("/verify")}
           >

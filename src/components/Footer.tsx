@@ -1,16 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Facebook, 
-  Twitter, 
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Facebook,
+  Twitter,
   Linkedin,
   ExternalLink,
-  Send
+  Send,
 } from "lucide-react";
 import apmcLogo from "../../public/favicon.ico";
 
@@ -20,13 +20,15 @@ const Footer = () => {
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          
           {/* Organization Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-primary font-bold text-xl">
-              <img src={apmcLogo} alt="APMC Logo" className="w-12 h-12 rounded-full object-contain" />
-
+                <img
+                  src={apmcLogo}
+                  alt="APMC Logo"
+                  className="w-12 h-12 rounded-full object-contain"
+                />
               </div>
               <div>
                 <h3 className="font-bold text-lg">APMC</h3>
@@ -36,9 +38,10 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-primary-foreground/90 leading-relaxed">
-              The Andhra Pradesh Medical Council is the statutory body regulating 
-              medical education and practice in the state, ensuring quality healthcare 
-              through proper licensing and professional standards.
+              The Andhra Pradesh Medical Council is the statutory body
+              regulating medical education and practice in the state, ensuring
+              quality healthcare through proper licensing and professional
+              standards.
             </p>
             <div className="flex gap-3">
               <Button size="sm" variant="secondary" className="p-2">
@@ -59,15 +62,15 @@ const Footer = () => {
             <ul className="space-y-3">
               {[
                 "New Registration",
-                "License Verification", 
+                "License Verification",
                 "Renewal Services",
                 "NOC Applications",
                 "FMG Registration",
-                "Forms & Downloads"
+                "Forms & Downloads",
               ].map((link, index) => (
                 <li key={index}>
-                  <Button 
-                    variant="link" 
+                  <Button
+                    variant="link"
                     className="p-0 h-auto text-primary-foreground/80 hover:text-primary-foreground justify-start"
                   >
                     {link}
@@ -84,15 +87,15 @@ const Footer = () => {
             <ul className="space-y-3">
               {[
                 "Doctor Registration",
-                "License Renewal", 
+                "License Renewal",
                 "Verification Portal",
                 "Complaint Redressal",
                 "CME Programs",
-                "Guidelines & Rules"
+                "Guidelines & Rules",
               ].map((service, index) => (
                 <li key={index}>
-                  <Button 
-                    variant="link" 
+                  <Button
+                    variant="link"
                     className="p-0 h-auto text-primary-foreground/80 hover:text-primary-foreground justify-start"
                   >
                     {service}
@@ -111,8 +114,10 @@ const Footer = () => {
                 <div>
                   <p className="text-sm font-medium">Head Office</p>
                   <p className="text-sm text-primary-foreground/80">
-                    Door No. 40-3-19/1, Labbipet<br />
-                    Vijayawada - 520010<br />
+                    Door No. 40-3-19/1, Labbipet
+                    <br />
+                    Vijayawada - 520010
+                    <br />
                     Andhra Pradesh, India
                   </p>
                 </div>
@@ -122,7 +127,9 @@ const Footer = () => {
                 <Phone className="h-5 w-5 text-secondary" />
                 <div>
                   <p className="text-sm font-medium">+91-863-2340116</p>
-                  <p className="text-xs text-primary-foreground/80">Office Hours</p>
+                  <p className="text-xs text-primary-foreground/80">
+                    Office Hours
+                  </p>
                 </div>
               </div>
 
@@ -130,15 +137,21 @@ const Footer = () => {
                 <Mail className="h-5 w-5 text-secondary" />
                 <div>
                   <p className="text-sm font-medium">apmcvjw@gmail.com</p>
-                  <p className="text-xs text-primary-foreground/80">Official Email</p>
+                  <p className="text-xs text-primary-foreground/80">
+                    Official Email
+                  </p>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
                 <Clock className="h-5 w-5 text-secondary" />
                 <div>
-                  <p className="text-sm font-medium">Mon - Fri: 10:00 AM - 5:00 PM</p>
-                  <p className="text-xs text-primary-foreground/80">Working Hours</p>
+                  <p className="text-sm font-medium">
+                    Mon - Fri: 10:00 AM - 5:00 PM
+                  </p>
+                  <p className="text-xs text-primary-foreground/80">
+                    Working Hours
+                  </p>
                 </div>
               </div>
             </div>
@@ -150,11 +163,12 @@ const Footer = () => {
           <div className="max-w-2xl mx-auto text-center">
             <h4 className="font-semibold text-lg mb-2">Stay Updated</h4>
             <p className="text-primary-foreground/80 mb-6">
-              Get the latest updates on medical regulations, new services, and important announcements.
+              Get the latest updates on medical regulations, new services, and
+              important announcements.
             </p>
             <div className="flex gap-3 max-w-md mx-auto">
-              <Input 
-                placeholder="Enter your email address" 
+              <Input
+                placeholder="Enter your email address"
                 className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60"
               />
               <Button variant="secondary">
@@ -174,16 +188,28 @@ const Footer = () => {
             © 2024 Andhra Pradesh Medical Council. All rights reserved.
           </div>
           <div className="flex gap-6">
-            <Button variant="link" className="p-0 h-auto text-primary-foreground/80 hover:text-primary-foreground">
+            <Button
+              variant="link"
+              className="p-0 h-auto text-primary-foreground/80 hover:text-primary-foreground"
+            >
               Privacy Policy
             </Button>
-            <Button variant="link" className="p-0 h-auto text-primary-foreground/80 hover:text-primary-foreground">
+            <Button
+              variant="link"
+              className="p-0 h-auto text-primary-foreground/80 hover:text-primary-foreground"
+            >
               Terms of Service
             </Button>
-            <Button variant="link" className="p-0 h-auto text-primary-foreground/80 hover:text-primary-foreground">
+            <Button
+              variant="link"
+              className="p-0 h-auto text-primary-foreground/80 hover:text-primary-foreground"
+            >
               Accessibility
             </Button>
-            <Button variant="link" className="p-0 h-auto text-primary-foreground/80 hover:text-primary-foreground">
+            <Button
+              variant="link"
+              className="p-0 h-auto text-primary-foreground/80 hover:text-primary-foreground"
+            >
               Sitemap
             </Button>
           </div>
