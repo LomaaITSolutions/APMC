@@ -13,6 +13,7 @@ import Verification from "./pages/Verification";
 import Renewal from "./pages/Renewal";
 import Contact from "./pages/Contact";
 import DownloadInfo from "./pages/Downloads";
+import Gallery from "./pages/Gallery";
 
 const queryClient = new QueryClient();
 
@@ -30,8 +31,9 @@ const App = () => (
             <Route path="/register" element={<Registration />} />
             <Route path="/verify" element={<Verification />} />
             <Route path="/renewal" element={<Renewal />} />
-            <Route path="/downloads" element={<DownloadInfo />} />
+            <Route path="/services/downloads" element={<DownloadInfo />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/about/gallery" element={<Gallery/>} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
