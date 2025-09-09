@@ -13,6 +13,8 @@ import Verification from "./pages/Verification";
 import Renewal from "./pages/Renewal";
 import Downloads from "./pages/Downloads";
 import Contact from "./pages/Contact";
+import SlotBooking from "./pages/Slot-booking";
+import Slot from "./pages/Slot";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +34,9 @@ const App = () => (
             <Route path="/renewal" element={<Renewal />} />
             <Route path="/downloads" element={<Downloads />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/slot-Booking" element={<SlotBooking />} />
+            <Route path="/slot" element={<Slot />} />
+
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
