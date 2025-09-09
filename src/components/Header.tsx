@@ -123,6 +123,9 @@ const [aboutOpen, setAboutOpen] = useState(false)
                         <Button variant="ghost" className="justify-start" onClick={() => navigate('/about/our-history')}>
                           Our History
                         </Button>
+                        <Button variant="ghost" className="justify-start" onClick={() => navigate('/about/gallery')}>
+                          Gallery
+                        </Button>
                       </div>
                     </div>
                   </NavigationMenuContent>
@@ -144,9 +147,6 @@ const [aboutOpen, setAboutOpen] = useState(false)
                         </Button>
                         <Button variant="ghost" className="justify-start" onClick={() => navigate('/services/downloads')}>
                          View Downloads
-                        </Button>
-                         <Button variant="ghost" className="justify-start" onClick={() => navigate('/services/gallery')}>
-                          Gallary
                         </Button>
                       </div>
                     </div>
@@ -253,6 +253,9 @@ const [aboutOpen, setAboutOpen] = useState(false)
             <Button variant="ghost" className="justify-start text-sm" onClick={() => navigate('/about/our-history')}>
               Our History
             </Button>
+            <Button variant="ghost" className="justify-start text-sm" onClick={() => navigate('/about/gallery')}>
+              Gallery
+            </Button>
           </div>
         )}
       </div>
@@ -278,9 +281,6 @@ const [aboutOpen, setAboutOpen] = useState(false)
             </Button>
             <Button variant="ghost" className="justify-start text-sm" onClick={() => navigate('/services/downloads')}>
               View Downloads
-            </Button>
-             <Button variant="ghost" className="justify-start text-sm" onClick={() => navigate('/services/gallery')}>
-              Gallary
             </Button>
           </div>
         )}
