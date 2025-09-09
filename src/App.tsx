@@ -11,13 +11,13 @@ import ServicesPage from "./pages/ServicesPage";
 import Registration from "./pages/Registration";
 import Verification from "./pages/Verification";
 import Renewal from "./pages/Renewal";
-import Downloads from "./pages/Downloads";
 import Contact from "./pages/Contact";
 import Page from "./pages/Visionpage";
 import History from "./pages/Historypage";
 import Missionpage from "./pages/Missionpage";
 import Gallery from "./pages/GalleryPage";
 import Officer from "./pages/Officer";
+import DownloadInfo from "./pages/Downloads";
 
 const queryClient = new QueryClient();
 
@@ -35,7 +35,7 @@ const App = () => (
             <Route path="/register" element={<Registration />} />
             <Route path="/verify" element={<Verification />} />
             <Route path="/renewal" element={<Renewal />} />
-            <Route path="/downloads" element={<Downloads />} />
+            <Route path="/downloads" element={<DownloadInfo />} />
             <Route path="/contact" element={<Contact />} />
             
             <Route path="/mission" element={<Missionpage />} />

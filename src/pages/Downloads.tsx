@@ -1,45 +1,119 @@
-import { Helmet } from "react-helmet-async";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import React from "react";
 import { Download } from "lucide-react";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
-const files = [
-  { name: "APMC Registration Guidelines.pdf", url: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" },
-  { name: "License Renewal Checklist.pdf", url: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" },
-  { name: "NOC Application Form.pdf", url: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" },
+interface DocumentItem {
+  title: string;
+  subtitle?: string;
+  href: string;
+  highlight?: boolean;
+}
+
+const documents: DocumentItem[] = [
+  { title: "APPLICATION FORM", href: "https://apmc.ap.gov.in/pdf/Application_Proformas/APPLICATION%20FORM.pdf" },
+  { title: "CHECKLIST", href: "https://apmc.ap.gov.in/pdf/Application_Proformas/REQUIREMENTS.pdf", highlight: true },
+  {
+    title: "ENCLOSURES FOR SUBMISSION WITH THE APPLICATION FORM FOR INDIAN MEDICAL GRADUATES & FOREIGN MEDICAL GRADUATES",
+    href: "https://apmc.ap.gov.in/pdf/Application_Proformas/REQUIREMENTS.pdf",
+  },
+  { title: "FEE STRUCTURE", href: "https://apmc.ap.gov.in/pdf/Application_Proformas/FEE%20STRUCTURE.pdf", highlight: true },
+  {
+    title: "PROFORMA - A",
+    subtitle: "DELAY AFFIDAVIT PROFORMA FOR M.B.B.S STUDENTS (PROVISIONAL & FINAL)",
+    href: "https://apmc.ap.gov.in/pdf/Application_Proformas/PROFORMA%20-%20A.pdf",
+    highlight: true,
+  },
+  {
+    title: "PROFORMA - B",
+    subtitle: "AFFIDAVIT PROFORMA FOR DUPLICATE REGISTRATION CERTIFICATES",
+    href: "https://apmc.ap.gov.in/pdf/Application_Proformas/PROFORMA%20-%20B.pdf",
+    highlight: true,
+  },
+  {
+    title: "PROFORMA - C",
+    subtitle: "AFFIDAVIT PROFORMA FOR ADDITIONAL QUALIFICATION REGISTRATION",
+    href: "https://apmc.ap.gov.in/pdf/Application_Proformas/PROFORMA%20-%20C.pdf",
+    highlight: true,
+  },
+  {
+    title: "PROFORMA - D",
+    subtitle: "AFFIDAVIT PROFORMA FOR RE-REGISTRATION",
+    href: "https://apmc.ap.gov.in/pdf/Application_Proformas/PROFORMA%20-%20D.pdf",
+    highlight: true,
+  },
+  {
+    title: "PROFORMA - E",
+    subtitle:
+      "CHECKLIST OF ENCLOSURES FOR PROVISIONAL / FINAL REGISTRATION OF FOREIGN MEDICAL GRADUATES",
+    href: "https://apmc.ap.gov.in/pdf/Application_Proformas/PROFORMA%20-%20E%20(FMG).pdf",
+    highlight: true,
+  },
+  {
+    title: "PROFORMA - F",
+    subtitle: "AFFIDAVIT PROFORMA FOR FOREIGN MEDICAL GRADUATES",
+    href: "https://apmc.ap.gov.in/pdf/Application_Proformas/PROFORMA%20-%20F.pdf",
+    highlight: true,
+  },
+  {
+    title: "PROFORMA - G",
+    subtitle: "DETAILS OF VISA ENTRIES IN THE PASSPORT FOR FOREIGN MEDICAL GRADUATES",
+    href: "https://apmc.ap.gov.in/pdf/Application_Proformas/FMGs%20-%20VISA%20ENTRIES%20FORM.pdf",
+    highlight: true,
+  },
+  {
+    title: "PROFORMA - H",
+    subtitle: "FOREIGN MEDICAL GRADUATES PROFORMA TO BE SUBMITTED WITH THE APPLICATION",
+    href: "https://apmc.ap.gov.in/pdf/Application_Proformas/PROFORMA%20-%20H.pdf",
+    highlight: true,
+  },
+  {
+    title: "PROFORMA - I",
+    subtitle:
+      "AFFIDAVIT PROFORMA FOR REVALIDATION OF PROVISIONAL MEDICAL REGISTRATION",
+    href: "https://apmc.ap.gov.in/pdf/Application_Proformas/PROFORMA%20-%20I.pdf",
+    highlight: true,
+  },
 ];
 
-const Downloads = () => {
+export default function DownloadInfo() {
   return (
-    <main className="min-h-screen bg-background">
-      <Helmet>
-        <title>Downloads | Andhra Pradesh Medical Council</title>
-        <meta name="description" content="Download APMC forms, guidelines, and documents." />
-        <link rel="canonical" href="/downloads" />
-      </Helmet>
-      <section className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-primary mb-6">Forms & Downloads</h1>
+    <main>
+    <Header />
+    <div className="max-w-5xl mx-auto mt-10 border text-sm border-gray-300">
+      {documents.map((doc, idx) => (
+        <div
+          key={idx}
+          className={`flex justify-between items-center px-4 py-3 border-b text-xs border-gray-200 ${doc.highlight ? "text-red-600 font-semibold" : "text-gray-800"
+            } ${idx % 2 === 0 ? "bg-white" : "bg-blue-50"} hover:bg-blue-100`}
+        >
+          <a
+            href={doc.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col hover:underline"
+          >
+            <span>{doc.title}</span>
+            {doc.subtitle && (
+              <span className="text-xs text-gray-700 font-normal mt-4">
+                {doc.subtitle}
+              </span>
+            )}
+          </a>
 
-        <Card className="max-w-3xl">
-          <CardContent className="p-6 space-y-4">
-            {files.map((f, i) => (
-              <div key={i} className="flex items-center justify-between p-4 border rounded-lg">
-                <div>
-                  <p className="font-medium">{f.name}</p>
-                  <p className="text-sm text-muted-foreground">PDF Document</p>
-                </div>
-                <a href={f.url} target="_blank" rel="noopener noreferrer">
-                  <Button>
-                    <Download className="h-4 w-4 mr-2" /> Download
-                  </Button>
-                </a>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-      </section>
+          <a
+            href={doc.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-800 hover:text-blue-600 hover:underline"
+          >
+            <Download size={18} />
+          </a>
+        </div>
+      ))}
+    </div>
+    <br />
+    <Footer />
     </main>
   );
-};
-
-export default Downloads;
+}

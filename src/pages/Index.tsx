@@ -3,6 +3,7 @@ import ServiceButtons from "@/components/ServiceButtons";
 import Hero from "@/components/Hero";
 import QuickActions from "@/components/QuickActions";
 import Footer from "@/components/Footer";
+import HomePage from "@/components/HomePage";
 
 const Index = () => {
   return (
@@ -10,6 +11,7 @@ const Index = () => {
       <Header />
       <ServiceButtons />
       <Hero />
+      <HomePage />
       <QuickActions />
       <Footer />
     </div>
