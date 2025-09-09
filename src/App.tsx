@@ -12,6 +12,11 @@ import Registration from "./pages/Registration";
 import Verification from "./pages/Verification";
 import Renewal from "./pages/Renewal";
 import Contact from "./pages/Contact";
+import Page from "./pages/Visionpage";
+import History from "./pages/Historypage";
+import Missionpage from "./pages/Missionpage";
+import Gallery from "./pages/GalleryPage";
+import Officer from "./pages/Officer";
 import DownloadInfo from "./pages/Downloads";
 import Gallery from "./pages/Gallery";
 
@@ -33,6 +38,14 @@ const App = () => (
             <Route path="/renewal" element={<Renewal />} />
             <Route path="/services/downloads" element={<DownloadInfo />} />
             <Route path="/contact" element={<Contact />} />
+            
+            <Route path="/mission" element={<Missionpage />} />
+            <Route path="/history" element={<History />} />
+            <Route path="/vision" element={<Page />} />
+
+
+            <Route path="/gallery" element={<Gallery />} />  
+            <Route path="/officers" element={<Officer />} />
             <Route path="/about/gallery" element={<Gallery/>} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
