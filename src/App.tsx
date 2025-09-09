@@ -12,7 +12,6 @@ import Registration from "./pages/Registration";
 import Verification from "./pages/Verification";
 import Renewal from "./pages/Renewal";
 import Contact from "./pages/Contact";
-import SlotBooking from "./pages/Slot-booking";
 import Slot from "./pages/Slot";
 import Page from "./pages/Visionpage";
 import History from "./pages/Historypage";
@@ -20,7 +19,7 @@ import Missionpage from "./pages/Missionpage";
 import Gallery from "./pages/GalleryPage";
 import Officer from "./pages/Officer";
 import DownloadInfo from "./pages/Downloads";
-import Gallery from "./pages/Gallery";
+import SlotBooking from "./pages/Slot-Booking";
 
 const queryClient = new QueryClient();
 
@@ -42,15 +41,14 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/slot-Booking" element={<SlotBooking />} />
             <Route path="/slot" element={<Slot />} />
-            
-            <Route path="/mission" element={<Missionpage />} />
-            <Route path="/history" element={<History />} />
-            <Route path="/vision" element={<Page />} />
 
+            <Route path="/about/mission" element={<Missionpage />} />
+            <Route path="/about/our-history" element={<History />} />
+            <Route path="/about/vision" element={<Page />} />
 
-            <Route path="/gallery" element={<Gallery />} />  
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/officers" element={<Officer />} />
-            <Route path="/about/gallery" element={<Gallery/>} />
+            <Route path="/about/gallery" element={<Gallery />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
