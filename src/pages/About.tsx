@@ -27,7 +27,7 @@ const About = () => {
               and ensure professional accountability of doctors across Andhra Pradesh.
             </p>
             <button
-              onClick={() => navigate("/history")}
+              onClick={() => navigate("/about/our-history")}
               className="mt-4 px-4 py-2 bg-primary text-white font-semibold rounded hover:bg-gray-700"
             >
               View More
@@ -45,7 +45,7 @@ const About = () => {
               accountability in medical services.
             </p>
             <button
-              onClick={() => navigate("/mission")}
+              onClick={() => navigate("/about/mission")}
               className="mt-4 px-4 py-2 bg-primary text-white font-semibold rounded hover:bg-gray-700"
             >
               View More
@@ -64,7 +64,7 @@ const About = () => {
               medical care.
             </p>
             <button
-              onClick={() => navigate("/vision")}
+              onClick={() => navigate("/about/vision")}
               className="mt-4 px-4 py-2 bg-primary text-white font-semibold rounded hover:bg-gray-700"
             >
               View More

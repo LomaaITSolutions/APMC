@@ -40,10 +40,8 @@ export const Gallery: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-b from-teal-700 to-teal-50 p-6">
         {/* Intro Content */}
         <div className="max-w-4xl mx-auto text-center mb-10">
-          <h1 className="text-4xl md:text-4xl font-bold text-white mb-3">
-            ANDHRA PRADESH MEDICAL COUNCIL
-          </h1>
-          <p className="text-white/90 text-[20px]">
+          
+          <p className="text-white/90 text-[18px]">
             Explore our gallery showcasing events, workshops, seminars, medical facilities, and initiatives.
             Stay updated with the activities and milestones of the Andhra Pradesh Medical Council.
           </p>
