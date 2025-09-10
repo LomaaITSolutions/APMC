@@ -27,6 +27,7 @@ import InAbsentiaAffidavit from "./NRI-Services/InAbsentiaAffidavit";
 import InAbsentiaRegistration from "./NRI-Services/InAbsentiaRegistration";
 import TemporaryPermission from "./NRI-Services/TemporaryPermission";
 import NOCApplication from "./pages/NOCApplication";
+import FAQ from "./pages/Faq";
 
 const queryClient = new QueryClient();
 
@@ -45,12 +46,11 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/slot-Booking" element={<SlotBooking />} />
             <Route path="/slot" element={<Slot />} />
+            <Route path="/faq" element={<FAQ />} />
 
             <Route path="/about/mission" element={<Missionpage />} />
             <Route path="/about/our-history" element={<History />} />
             <Route path="/about/vision" element={<Page />} />
-
-            <Route path="/gallery" element={<Gallery />} />
             <Route path="/officers" element={<Officer />} />
             <Route path="/about/gallery" element={<Gallery />} />
             <Route path="/constitution" element={<Constitution />} />
