@@ -8,9 +8,6 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import ServicesPage from "./pages/ServicesPage";
-import Registration from "./pages/Registration";
-import Verification from "./pages/Verification";
-import Renewal from "./pages/Renewal";
 import Contact from "./pages/Contact";
 import Slot from "./pages/Slot";
 import Page from "./pages/Visionpage";
@@ -20,6 +17,16 @@ import Gallery from "./pages/GalleryPage";
 import Officer from "./pages/Officer";
 import DownloadInfo from "./pages/Downloads";
 import SlotBooking from "./pages/Slot-Booking";
+import Constitution from "./pages/Constitution";
+import LatestUpdates from "./pages/LatestUpdates";
+import MeetingsDecisions from "./pages/Meetings-Decisions";
+import ActsRules from "./pages/Acts-Rules";
+import Notifications from "./pages/Notifications";
+import GoodStandingCertificate from "./NRI-Services/GoodStandingCertificate";
+import InAbsentiaAffidavit from "./NRI-Services/InAbsentiaAffidavit";
+import InAbsentiaRegistration from "./NRI-Services/InAbsentiaRegistration";
+import TemporaryPermission from "./NRI-Services/TemporaryPermission";
+import NOCApplication from "./pages/NOCApplication";
 
 const queryClient = new QueryClient();
 
@@ -34,9 +41,6 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<ServicesPage />} />
-            <Route path="/register" element={<Registration />} />
-            <Route path="/verify" element={<Verification />} />
-            <Route path="/renewal" element={<Renewal />} />
             <Route path="/services/downloads" element={<DownloadInfo />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/slot-Booking" element={<SlotBooking />} />
@@ -49,6 +53,16 @@ const App = () => (
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/officers" element={<Officer />} />
             <Route path="/about/gallery" element={<Gallery />} />
+            <Route path="/constitution" element={<Constitution />} />
+            <Route path="/latest-updates" element={<LatestUpdates />} />
+            <Route path="/meetings-decisions" element={<MeetingsDecisions />} />
+            <Route path="/acts-rules" element={<ActsRules />} />
+            <Route path="/notifications" element={<Notifications />} />
+            <Route path="/nri-services/good-standing-certificate" element={<GoodStandingCertificate />} />
+            <Route path="/nri-services/in-absentia-affidavit" element={<InAbsentiaAffidavit />} />
+            <Route path="/nri-services/in-absentia-registration" element={<InAbsentiaRegistration />} />
+            <Route path="/nri-services/temporary-permission" element={<TemporaryPermission />} />
+            <Route path="/noc-application" element={<NOCApplication />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
