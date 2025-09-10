@@ -197,14 +197,14 @@ const Header = () => {
                         <Button
                           variant="ghost"
                           className="justify-start"
-                          onClick={() => navigate("/services/notification")}
+                          onClick={() => navigate("/notifications")}
                         >
                           Notifications
                         </Button>
                         <Button
                           variant="ghost"
                           className="justify-start"
-                          onClick={() => navigate("/services/acts-rules")}
+                          onClick={() => navigate("/acts-rules")}
                         >
                           Acts/Rules
                         </Button>
@@ -212,7 +212,7 @@ const Header = () => {
                           variant="ghost"
                           className="justify-start"
                           onClick={() =>
-                            navigate("/services/meetings-decisions")
+                            navigate("/meetings-decisions")
                           }
                         >
                           Meetings and Decisions
@@ -274,7 +274,7 @@ const Header = () => {
                           variant="ghost"
                           className="justify-start"
                           onClick={() =>
-                            navigate("/nri/in-absentia-registration")
+                            navigate("/nri-services/in-absentia-registration")
                           }
                         >
                           IN ABSENTIA Registration
@@ -282,7 +282,7 @@ const Header = () => {
                         <Button
                           variant="ghost"
                           className="justify-start"
-                          onClick={() => navigate("/nri/affidavit-proforma")}
+                          onClick={() => navigate("/nri-services/in-absentia-affidavit")}
                         >
                           IN ABSENTIA Affidavit Proforma
                         </Button>
@@ -290,17 +290,17 @@ const Header = () => {
                           variant="ghost"
                           className="justify-start"
                           onClick={() =>
-                            navigate("/nri/good-standing-certificate")
+                            navigate("/nri-services/good-standing-certificate")
                           }
                         >
                           NMC Good Standing Certificate
                         </Button>
                         <Button
                           variant="ghost"
-                          className="justify-start"
-                          onClick={() => navigate("/nri/temporary-permission")}
+                          className="justify-start "
+                          onClick={() => navigate("/nri-services/temporary-permission")}
                         >
-                          Temporary Permission for Foreign/Outside State
+                          Temporary Permission for Foreign/Outside <br /> State
                           visiting Doctors
                         </Button>
                       </div>
@@ -435,13 +435,13 @@ const Header = () => {
                     <Button
                       variant="ghost"
                       className="justify-start text-sm"
-                      onClick={() => navigate("/services/notification")}
+                      onClick={() => navigate("/notifications")}
                     >
                       Notifications
                     </Button>
                     <Button
                       variant="ghost"
-                      className="justify-start text-sm"
+                      className="justify-start"
                       onClick={() => navigate("/services/acts-rules")}
                     >
                       Acts/Rules
@@ -449,7 +449,7 @@ const Header = () => {
                     <Button
                       variant="ghost"
                       className="justify-start text-sm"
-                      onClick={() => navigate("/services/meetings-decisions")}
+                      onClick={() => navigate("/meetings-decisions")}
                     >
                       Meetings and Decisions
                     </Button>
@@ -522,28 +522,28 @@ const Header = () => {
                     <Button
                       variant="ghost"
                       className="justify-start text-sm"
-                      onClick={() => navigate("/nri/in-absentia-registration")}
+                      onClick={() => navigate("/nri-services/in-absentia-registration")}
                     >
                       IN ABSENTIA Registration
                     </Button>
                     <Button
                       variant="ghost"
                       className="justify-start text-sm"
-                      onClick={() => navigate("/nri/affidavit-proforma")}
+                      onClick={() => navigate("/nri-services/in-absentia-affidavit")}
                     >
                       IN ABSENTIA Affidavit Proforma
                     </Button>
                     <Button
                       variant="ghost"
                       className="justify-start text-sm"
-                      onClick={() => navigate("/nri/good-standing-certificate")}
+                      onClick={() => navigate("/nri-services/good-standing-certificate")}
                     >
                       NMC Good Standing Certificate
                     </Button>
                     <Button
                       variant="ghost"
                       className="justify-start text-sm"
-                      onClick={() => navigate("/nri/temporary-permission")}
+                      onClick={() => navigate("/nri-services/temporary-permission")}
                     >
                       Temporary Permission for Foreign/Outside State visiting
                       Doctors

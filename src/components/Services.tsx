@@ -15,8 +15,12 @@ import {
   User,
   LogIn,
 } from "lucide-react";
+import apmcLogo from "../../public/favicon.ico";
+import { useNavigate } from "react-router-dom";
 
 const Services: React.FC = () => {
+
+  const navigate = useNavigate(); 
   const services = [
     {
       icon: FileText,
@@ -141,9 +145,15 @@ const Services: React.FC = () => {
         <div className="flex items-center justify-between px-6 py-4">
           {/* Left: Logo + Title */}
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-teal-700 text-white font-bold text-lg">
-              AP
-            </div>
+            {/* Logo Image */}
+            <img
+              src={apmcLogo} // replace with your logo path
+              alt="APMC Logo"
+              onClick={() => navigate("/")}
+              className="w-12 h-12 rounded-full cursor-pointer object-cover"
+            />
+
+            {/* Text */}
             <div>
               <h1 className="text-lg font-bold text-gray-900">
                 AP Medical Council
@@ -155,77 +165,29 @@ const Services: React.FC = () => {
           </div>
 
           {/* Center: Navigation */}
-          <nav className="hidden md:flex space-x-8  font-bold text-gray-700 font-medium">
+          <nav className="hidden md:flex space-x-8 font-bold text-gray-700 font-medium">
             <a href="/" className="hover:text-teal-700">
               Home
             </a>
 
-            {/* Final Registration Dropdown */}
-            <div className="relative group">
-              <button className="hover:text-teal-700 flex items-center">
-                Final Registration
-                <svg
-                  className="ml-1 w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
+            {/* Final Registration as a simple link */}
+            <a href="/popup" className="hover:text-teal-700">
+              Final Registration
+            </a>
 
-              {/* Dropdown Menu */}
-              <div
-                className="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg 
-                    opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-                    transition duration-200 z-50"
-              >
-                <ul className="py-2 text-gray-700">
-                  <li>
-                    <a
-                      href="/registration/ap"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      M.B.B.S Studied in Andhra Pradesh
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/registration/other-state"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      M.B.B.S Studied in Other State
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/registration/foreign"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      M.B.B.S Studied in Other Country (FMGs)
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <a href="/services" className="hover:text-teal-700">
+            <a href="/services/verify" className="hover:text-teal-700">
               Search Medical Register
             </a>
           </nav>
 
+
           {/* Right: Icons + Login */}
           <div className="flex items-center space-x-4">
-            <button className="bg-teal-700 text-white px-4 py-2 rounded-md font-medium hover:bg-teal-800 transition-colors">
+            <button onClick={() => navigate("/services/doctor-signup")} className="bg-teal-700 text-white px-4 py-2 rounded-md font-medium hover:bg-teal-800 transition-colors">
               Doctor Signup
             </button>
 
-            <button className="bg-teal-700 text-white px-4 py-2 rounded-md font-medium hover:bg-teal-800 transition-colors">
+            <button onClick={() => navigate("/services/doctor-login")} className="bg-teal-700 text-white px-4 py-2 rounded-md font-medium hover:bg-teal-800 transition-colors">
               Doctor Login
             </button>
           </div>

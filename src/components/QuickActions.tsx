@@ -67,9 +67,9 @@ const QuickActions = () => {
   ];
 
   const quickLinks = [
-    { title: "Application Forms", icon: FileText, url: "/downloads" },
-    { title: "Fee Structure", icon: FileText, url: "/downloads" },
-    { title: "Guidelines & Rules", icon: Download, url: "/downloads" },
+    { title: "Application Forms", icon: FileText, url: "cme/registeration" },
+    { title: "Fee Structure", icon: FileText, url: "cme/registeration" },
+    { title: "Guidelines & Rules", icon: Download, url: "/services/downloads" },
     { title: "Contact Directory", icon: Phone, url: "/contact" },
     { title: "Office Hours", icon: Clock, url: "/contact" },
     { title: "Complaint Portal", icon: ExternalLink, url: "/contact" },
