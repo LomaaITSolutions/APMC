@@ -14,7 +14,7 @@ const Sidebar = () => {
         </h2>
         <ul className="p-3 space-y-2 text-sm">
           <li>
-            <a href="#notifications" className="hover:text-primary">
+            <a href="/notifications" className="hover:text-primary">
               <span className="font-bold">{">"}</span> Notifications
             </a>
           </li>
