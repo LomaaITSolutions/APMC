@@ -6,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Search, RefreshCw, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
  
 const MedicalRegisterSearchPage = () => {
   const [searchData, setSearchData] = useState({
@@ -179,6 +180,7 @@ const MedicalRegisterSearchPage = () => {
           </Card>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

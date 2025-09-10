@@ -27,7 +27,7 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="/downloads" className="hover:text-primary">
+            <a href="/services/downloads" className="hover:text-primary">
               <span className="font-bold">{">"}</span> Downloads
             </a>
           </li>
