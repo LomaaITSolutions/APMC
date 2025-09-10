@@ -8,9 +8,6 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import ServicesPage from "./pages/ServicesPage";
-import Registration from "./pages/Registration";
-import Verification from "./pages/Verification";
-import Renewal from "./pages/Renewal";
 import Contact from "./pages/Contact";
 import Slot from "./pages/Slot";
 import Page from "./pages/Visionpage";
@@ -27,12 +24,23 @@ import PaymentIDCard from "./components/PaymentIDCard";
 import UploadEnclosures from "./components/UploadEnclosures";
 import BookSlot from "./components/BookSlot";
 import Details from "./components/Details";
-import DoctorRegister from './pages/DoctorRegister'
-import DoctorRegisterForm from './pages/Registerform'
+import DoctorRegister from "./pages/DoctorRegister";
+import DoctorRegisterForm from "./pages/Registerform";
 import DoctorLogin from "./pages/Doctor-login";
 import DoctorLoginPage from "./pages/Doctor-Login-page";
 import MedicalRegisterSearch from "./components/MedicalRegisterSearch";
 import Popup from "./components/Popup";
+import Constitution from "./pages/Constitution";
+import LatestUpdates from "./pages/LatestUpdates";
+import MeetingsDecisions from "./pages/Meetings-Decisions";
+import ActsRules from "./pages/Acts-Rules";
+import Notifications from "./pages/Notifications";
+import GoodStandingCertificate from "./NRI-Services/GoodStandingCertificate";
+import InAbsentiaAffidavit from "./NRI-Services/InAbsentiaAffidavit";
+import InAbsentiaRegistration from "./NRI-Services/InAbsentiaRegistration";
+import TemporaryPermission from "./NRI-Services/TemporaryPermission";
+import NOCApplication from "./pages/NOCApplication";
+import FAQ from "./pages/Faq";
 
 const queryClient = new QueryClient();
 
@@ -48,18 +56,36 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/registration/ap" element={<RegistrationAP />} />
-        <Route path="/registration-other-state" element={<RegistrationOtherState />} />
-        <Route path="/registration-other-country" element={<RegistrationOtherCountry />} />
-        <Route path="/payment-id-card" element={<PaymentIDCard />} />
-        <Route path="/upload-enclosures" element={<UploadEnclosures />} />
-        <Route path="/book-slot" element={<BookSlot />} />
-        <Route path="/details" element={<Details />} />
-        <Route path="/services/doctor-signup" element={<DoctorRegister />} />
-        <Route path="/services/doctor-signup/Form" element={<DoctorRegisterForm />} />
-        <Route path="/services/doctor-login" element={<DoctorLogin />} />
-        <Route path="/services/doctor-login-page" element={<DoctorLoginPage />} />
-        <Route path="/services/verify" element={<MedicalRegisterSearch />} />
-        <Route path="/popup" element={<Popup />} />
+            <Route
+              path="/registration-other-state"
+              element={<RegistrationOtherState />}
+            />
+            <Route
+              path="/registration-other-country"
+              element={<RegistrationOtherCountry />}
+            />
+            <Route path="/payment-id-card" element={<PaymentIDCard />} />
+            <Route path="/upload-enclosures" element={<UploadEnclosures />} />
+            <Route path="/book-slot" element={<BookSlot />} />
+            <Route path="/details" element={<Details />} />
+            <Route
+              path="/services/doctor-signup"
+              element={<DoctorRegister />}
+            />
+            <Route
+              path="/services/doctor-signup/Form"
+              element={<DoctorRegisterForm />}
+            />
+            <Route path="/services/doctor-login" element={<DoctorLogin />} />
+            <Route
+              path="/services/doctor-login-page"
+              element={<DoctorLoginPage />}
+            />
+            <Route
+              path="/services/verify"
+              element={<MedicalRegisterSearch />}
+            />
+            <Route path="/popup" element={<Popup />} />
 
             <Route path="/register" element={<Registration />} />
             <Route path="/verify" element={<Verification />} />
@@ -68,14 +94,35 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/slot-Booking" element={<SlotBooking />} />
             <Route path="/slot" element={<Slot />} />
+            <Route path="/faq" element={<FAQ />} />
 
             <Route path="/about/mission" element={<Missionpage />} />
             <Route path="/about/our-history" element={<History />} />
             <Route path="/about/vision" element={<Page />} />
-
-            <Route path="/gallery" element={<Gallery />} />
             <Route path="/officers" element={<Officer />} />
             <Route path="/about/gallery" element={<Gallery />} />
+            <Route path="/constitution" element={<Constitution />} />
+            <Route path="/latest-updates" element={<LatestUpdates />} />
+            <Route path="/meetings-decisions" element={<MeetingsDecisions />} />
+            <Route path="/acts-rules" element={<ActsRules />} />
+            <Route path="/notifications" element={<Notifications />} />
+            <Route
+              path="/nri-services/good-standing-certificate"
+              element={<GoodStandingCertificate />}
+            />
+            <Route
+              path="/nri-services/in-absentia-affidavit"
+              element={<InAbsentiaAffidavit />}
+            />
+            <Route
+              path="/nri-services/in-absentia-registration"
+              element={<InAbsentiaRegistration />}
+            />
+            <Route
+              path="/nri-services/temporary-permission"
+              element={<TemporaryPermission />}
+            />
+            <Route path="/noc-application" element={<NOCApplication />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

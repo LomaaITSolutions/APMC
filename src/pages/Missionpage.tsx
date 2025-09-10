@@ -13,7 +13,7 @@ const Sidebar = () => {
         </h2>
         <ul className="p-3 space-y-2 text-sm">
           <li>
-            <a href="#notifications" className="hover:text-primary">
+            <a href="/notifications" className="hover:text-primary">
               <span className="font-bold">{">"}</span> Notifications
             </a>
           </li>
@@ -33,7 +33,7 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="#downloads" className="hover:text-primary">
+            <a href="/services/downloads" className="hover:text-primary">
               <span className="font-bold">{">"}</span> Downloads
             </a>
           </li>
@@ -52,11 +52,11 @@ const Sidebar = () => {
           <img src="https://media.istockphoto.com/id/1285443833/photo/male-doctor-talking-to-group-of-people-on-presentation-in-the-hospital.jpg?s=612x612&w=0&k=20&c=QM1zk1tr5ZJfXuzHNJPWVhJ3H3dn7GvsrKC90d6TB8A=" alt="APMC 4" className="rounded-md" />
         </div>
         <Link to="/gallery">
-  <p className="mt-2 text-md font-bold text-primary text-center cursor-pointer">
-          View Gallery {">"}
-        </p>  
-        </Link>  
-          </div>
+          <p className="mt-2 text-md font-bold text-primary text-center cursor-pointer">
+            View Gallery {">"}
+          </p>
+        </Link>
+      </div>
     </aside>
   );
 };
@@ -74,21 +74,21 @@ const MainContent = () => {
 
       <ul className="space-y-3 text-gray-700">
         <li>
-       ➜ Maintaining an up-to-date database of qualified doctors possessing
+          ➜ Maintaining an up-to-date database of qualified doctors possessing
           recognised degrees in modern scientific medicine within Andhra Pradesh.
         </li>
         <li>➜ Fostering good medical practices.</li>
         <li>➜ Promoting high standards in medical education and training.</li>
         <li>
-        ➜ Dealing firmly and fairly with doctors whose fitness to practice is in
+          ➜ Dealing firmly and fairly with doctors whose fitness to practice is in
           doubt.
         </li>
         <li>
-         ➜ Maintain a Code of Conduct for the Medical Practitioners Registered
+          ➜ Maintain a Code of Conduct for the Medical Practitioners Registered
           with this council.
         </li>
         <li>
-         ➜ Responsible for regular upgrading of knowledge, techniques of practice
+          ➜ Responsible for regular upgrading of knowledge, techniques of practice
           and to impart the same to the needy in society.
         </li>
       </ul>
@@ -99,14 +99,14 @@ const MainContent = () => {
 const Missionpage = () => {
   return (
     <>
-    <Header />
-    <div className="min-h-screen flex justify-center bg-gray-50 p-6">
-      <div className="flex flex-col-reverse md:flex-row w-full max-w-6xl gap-6">
-        <Sidebar />
-        <MainContent />
+      <Header />
+      <div className="min-h-screen flex justify-center bg-gray-50 p-6">
+        <div className="flex flex-col-reverse md:flex-row w-full max-w-6xl gap-6">
+          <Sidebar />
+          <MainContent />
+        </div>
       </div>
-    </div>
-    <Footer />
+      <Footer />
     </>
   );
 };
