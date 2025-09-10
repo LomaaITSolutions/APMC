@@ -131,19 +131,20 @@ const Hero = () => {
                 <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
                   <ShieldCheck className="h-6 w-6 text-white" />
                 </div>
-                <div className="flex-1">
+               <a href="/noc-application"> <div className="flex-1">
                   <h3 className="font-semibold text-lg mb-1">Apply for NOC</h3>
                   <p className="text-muted-foreground text-sm">
                     No Objection Certificate for various medical purposes and
                     transfers.
                   </p>
                 </div>
+                </a>
                 <Button
                   variant="ghost"
                   size="sm"
-                  onClick={() => (window.location.pathname = "/verify")}
+                  onClick={() => (window.location.pathname = "/noc-application")}
                 >
-                  <ArrowRight className="h-4 w-4" />
+                  <ArrowRight className="h-4 w-4 ml-16" />
                 </Button>
               </div>
             </Card>

@@ -94,23 +94,22 @@ const MainContent = () => {
 
       <ul className="space-y-3 text-gray-700">
         <li>
-          ➜ Maintaining an up-href-date database of qualified dochrefrs possessing
-          recognised degrees in modern scientific medicine within Andhra
-          Pradesh.
+          ➜ Maintaining an up-to-date database of qualified doctors possessing
+          recognised degrees in modern scientific medicine within Andhra Pradesh.
         </li>
         <li>➜ Fostering good medical practices.</li>
         <li>➜ Promoting high standards in medical education and training.</li>
         <li>
-          ➜ Dealing firmly and fairly with dochrefrs whose fitness href practice is
-          in doubt.
+          ➜ Dealing firmly and fairly with doctors whose fitness to practice is in
+          doubt.
         </li>
         <li>
           ➜ Maintain a Code of Conduct for the Medical Practitioners Registered
           with this council.
         </li>
         <li>
-          ➜ Responsible for regular upgrading of knowledge, techniques of
-          practice and href impart the same href the needy in society.
+          ➜ Responsible for regular upgrading of knowledge, techniques of practice
+          and to impart the same to the needy in society.
         </li>
       </ul>
     </main>
