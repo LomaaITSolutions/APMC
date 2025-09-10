@@ -230,7 +230,8 @@ const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="hover:text-primary">
+                  <NavigationMenuTrigger className="hover:text-primary"
+                  onClick={()=> navigate("/cme/portal")}>
                     CME
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -466,7 +467,7 @@ const Header = () => {
               {/* CME Dropdown */}
               <div className="pl-2">
                 <button
-                  onClick={() => setCmeOpen(!cmeOpen)}
+                  onClick={() => navigate("/cme/portal")}
                   className="flex pl-2 py-2 items-center justify-between w-full text-left text-sm font-medium"
                 >
                   CME{" "}
