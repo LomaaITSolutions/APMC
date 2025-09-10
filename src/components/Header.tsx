@@ -440,7 +440,7 @@ const Header = () => {
                     </Button>
                     <Button
                       variant="ghost"
-                      className="justify-start text-sm"
+                      className="justify-start"
                       onClick={() => navigate("/services/acts-rules")}
                     >
                       Acts/Rules

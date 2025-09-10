@@ -19,9 +19,9 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="#members" className="hover:text-primary">
-              <span className="font-bold">{">"}</span> Members of APMC
-            </a>
+             <a href="/members" className="hover:text-primary">
+               <span className="font-bold">{">"}</span> Members of APMC
+              </a>
           </li>
           <li>
             <a href="/officers" className="hover:text-primary">

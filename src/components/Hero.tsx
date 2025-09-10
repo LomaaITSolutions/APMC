@@ -104,7 +104,7 @@ const Hero = () => {
             </Card>
 
             <Card className="p-6 bg-white/95 backdrop-blur shadow-medical hover:shadow-lg transition-all hover:scale-105">
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4"   onClick={() => (window.location.pathname = "/renewal")}>
                 <div className="w-12 h-12 bg-medical-green rounded-lg flex items-center justify-center">
                   <Calendar className="h-6 w-6 text-white" />
                 </div>
