@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function SlotBooking() {
   const [showPopup, setShowPopup] = useState(false);
   const [agreed, setAgreed] = useState(false);
+  const navigate = useNavigate();
 
   // Auto-open popup when the page loads
   useEffect(() => {
@@ -13,7 +15,6 @@ export default function SlotBooking() {
     setAgreed(true);
     setShowPopup(false);
   };
-
 
                 const [selectedSlotTime, setSelectedSlotTime] = useState("");
                 const [selectedServices, setSelectedServices] = useState<string[]>([]);
@@ -38,7 +39,6 @@ export default function SlotBooking() {
                     );
                 };
 
-
   return (
     <div className="p-6">
       {/* Popup Modal */}
@@ -55,62 +55,96 @@ export default function SlotBooking() {
                     WebkitFilter: "blur(8px)",
                 }}
             ></div>
-          <div className="bg-white rounded-xl shadow-lg w-11/12 md:w-2/3 lg:w-1/2 p-6 relative">
-            <h2 className="text-xl font-bold text-center mb-4 text-green-700">
-              Instructions for Slot Booking
-            </h2>
-            <ul className="list-disc pl-6 space-y-2 text-gray-800 text-base">
-              <li>
-                <b>Final Medical Registration / Permanent Registration (PR).</b>
-                <ul className="list-none pl-4 mt-1">
-                  <li>
-                    <a href="#" className="text-blue-700 underline font-semibold">For Andhra Pradesh Graduates</a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-blue-700 underline font-semibold">For Other State Graduates</a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-blue-700 underline font-semibold">For Foreign Medical Graduates</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <b>To avail APMC eDoctor Services (utilizing the online services of APMC).</b>
-                <ul className="list-none pl-4 mt-1">
-                  <li>
-                    Those <b>who are registered in APMC</b> and obtained APMC Registration Number before <b>25 May, 2023</b> are eligible for <a href="#" className="text-blue-700 underline font-semibold">Signup</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" className="text-blue-700 underline font-semibold">Click here to check slot availability</a>
-              </li>
-              <li>
-                <b>Slots will be released on every Friday at 12:00 noon.</b>
-              </li>
-              <li>
-                With one slot you can avail multiple services. Avoid booking more than one slot, else duplication may lead to cancellation of your slot.
-              </li>
-              <li>
-                Slot booking could be availed once in 30 days.
-              </li>
-              <li>
-                Please ensure your presence atleast 20 minutes before the time slot booked.
-              </li>
-              <li>
-                <b>For Application & Annexures</b> <a href="/downloads" className="text-blue-700 underline font-semibold">Click Here</a>
-              </li>
-            </ul>
-            {/* Buttons */}
-            <div className="flex justify-end gap-4 mt-6">
-              <button
-                onClick={handleAgree}
-                className="px-4 py-2 rounded-md bg-teal-700 text-white"
-              >
-                I Agree
-              </button>
-            </div>
-          </div>
+          <div className="bg-white rounded-xl shadow-lg w-11/12 md:w-2/3 lg:w-1/2 p-6 relative ">
+  <h2 className="text-xl md:text-2xl font-bold text-center mb-4 text-green-700">
+    Instructions for Slot Booking
+  </h2>
+  <ul className="list-disc pl-4 sm:pl-6 space-y-2 text-gray-800 text-sm sm:text-base">
+    <li>
+      <b>Final Medical Registration / Permanent Registration (PR).</b>
+      <ul className="list-none pl-2 sm:pl-4 mt-1 space-y-1">
+        <li>
+          <a
+            href="#"
+            className="text-blue-700 underline font-semibold block text-sm sm:text-base"
+          >
+            For Andhra Pradesh Graduates
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            className="text-blue-700 underline font-semibold block text-sm sm:text-base"
+          >
+            For Other State Graduates
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            className="text-blue-700 underline font-semibold block text-sm sm:text-base"
+          >
+            For Foreign Medical Graduates
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <b>
+        To avail APMC eDoctor Services (utilizing the online services of APMC).
+      </b>
+      <ul className="list-none pl-2 sm:pl-4 mt-1 space-y-1">
+        <li className="text-sm sm:text-base">
+          Those <b>who are registered in APMC</b> and obtained APMC Registration
+          Number before <b>25 May, 2023</b> are eligible for{" "}
+          <a
+            href="#"
+            className="text-blue-700 underline font-semibold text-sm sm:text-base"
+          >
+            Signup
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a
+        href="/slot"
+        className="text-blue-700 underline font-semibold text-sm sm:text-base"
+      >
+        Click here to check slot availability
+      </a>
+    </li>
+    <li>
+      <b>Slots will be released on every Friday at 12:00 noon.</b>
+    </li>
+    <li>
+      With one slot you can avail multiple services. Avoid booking more than one
+      slot, else duplication may lead to cancellation of your slot.
+    </li>
+    <li>Slot booking could be availed once in 30 days.</li>
+    <li>Please ensure your presence atleast 20 minutes before the time slot booked.</li>
+    <li>
+      <b>For Application & Annexures</b>{" "}
+      <a
+        href="/services/downloads"
+        className="text-blue-700 underline font-semibold text-sm sm:text-base"
+      >
+        Click Here
+      </a>
+    </li>
+  </ul>
+
+  {/* Buttons */}
+  <div className="flex flex-col sm:flex-row justify-center sm:justify-end gap-3 mt-6">
+    <button
+      onClick={handleAgree}
+      className="px-4 py-2 rounded-md bg-teal-700 text-white w-full sm:w-auto text-sm sm:text-base"
+    >
+      I Agree
+    </button>
+  </div>
+</div>
+
         </div>
       )}
 
@@ -124,25 +158,26 @@ export default function SlotBooking() {
                     <img
                         src="/favicon.ico"
                         alt="APMC Logo"
-                        className="h-20 w-20 object-contain  border-2 rounded-full"
+                        onClick={() => navigate("/")}
+                        className="h-24 w-24 object-contain border-2 rounded-full"
                     />
                     <div className="flex flex-col items-center flex-1">
                         <h1 className="text-3xl md:text-4xl font-bold text-white mb-2" style={{ fontFamily: "Noto Sans Telugu, sans-serif" }}>
                             ఆంధ్రప్రదేశ్ వైద్య మండలి
                         </h1>
-                        <h2 className="text-xl md:text-2xl font-semibold text-gray-800">
+                        <h2 className="text-center text-xl md:text-2xl font-semibold text-white">
                             Andhra Pradesh Medical Council
                         </h2>
                     </div>
                     <img
                         src="/logo.jpeg"
                         alt="AP Govt Logo"
-                        className="h-20 w-20 object-contain  border-2 rounded-full"
+                        className="h-24 w-24 object-contain  border-2 rounded-full"
                     />
                 </div>
                 <div className="h-28"></div>
                 <div className="bg-white rounded-md p-4 mb-4">
-                    <div className="text-sm text-gray-800 mb-2">
+                    <div className="text-sm text-gray-800 mb-2 mt-6">
                         If slowness is observed during page loading, please refresh the page for better experience.
                     </div>
                     <div className="text-sm mb-1">
@@ -323,11 +358,7 @@ export default function SlotBooking() {
                     </div>
                 </div>
                 <div className="mt-6 text-blue-700 text-sm">
-                    Designed, Developed and Hosted by
-                    <span className="mx-2">
-                        <img src="/nic-logo.png" alt="NIC Logo" className="inline h-6 align-middle" />
-                    </span>
-                    NIC, AP State Centre, Ministry of Electronics & Information Technology, Government of India.
+                    Designed, Developed and Hosted by LomaaITSolutions , A.P State
                 </div>
             </div>
         </div>
