@@ -4,17 +4,23 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+
+// Pages
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import ServicesPage from "./pages/ServicesPage";
+import Renewal from "./pages/Renewal";
 import Contact from "./pages/Contact";
 import Slot from "./pages/Slot";
-import Page from "./pages/Visionpage";
-import History from "./pages/Historypage";
+import Visionpage from "./pages/Visionpage";
+import Historypage from "./pages/Historypage";
 import Missionpage from "./pages/Missionpage";
-import Gallery from "./pages/GalleryPage";
+import GalleryPage from "./pages/GalleryPage";
 import Officer from "./pages/Officer";
+import Members from "./pages/members";
+import MedicalRegisterSearch from "./pages/MedicalRegisterSearch";  
+import Register from "./pages/Registration";  
 import DownloadInfo from "./pages/Downloads";
 import SlotBooking from "./pages/Slot-Booking";
 import RegistrationAP from "./components/RegistrationAP";
@@ -28,7 +34,6 @@ import DoctorRegister from "./pages/DoctorRegister";
 import DoctorRegisterForm from "./pages/Registerform";
 import DoctorLogin from "./pages/Doctor-login";
 import DoctorLoginPage from "./pages/Doctor-Login-page";
-import MedicalRegisterSearch from "./components/MedicalRegisterSearch";
 import Popup from "./components/Popup";
 import Constitution from "./pages/Constitution";
 import LatestUpdates from "./pages/LatestUpdates";
@@ -42,6 +47,9 @@ import TemporaryPermission from "./NRI-Services/TemporaryPermission";
 import NOCApplication from "./pages/NOCApplication";
 import FAQ from "./pages/Faq";
 
+// Special pages
+import ActsRulesPage from "./pages/act-rulespage";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -52,9 +60,19 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
+            {/* Home */}
             <Route path="/" element={<Index />} />
+
+            {/* About */}
             <Route path="/about" element={<About />} />
+            <Route path="/about/mission" element={<Missionpage />} />
+            <Route path="/about/our-history" element={<Historypage />} />
+            <Route path="/about/vision" element={<Visionpage />} />
+            <Route path="/about/gallery" element={<GalleryPage />} />
+
+            {/* Services */}
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/acts-rules" element={<ActsRulesPage />} />
             <Route path="/registration/ap" element={<RegistrationAP />} />
             <Route
               path="/registration-other-state"
@@ -91,11 +109,26 @@ const App = () => (
             <Route path="/verify" element={<Verification />} />
             <Route path="/renewal" element={<Renewal />} />
             <Route path="/services/downloads" element={<DownloadInfo />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/slot-Booking" element={<SlotBooking />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/verify" element={<MedicalRegisterSearch />} />
+
+            {/* Registration / Renewal */}
+            <Route path="/renewal" element={<Renewal />} />
+
+            {/* Members & Officers */}
+            <Route path="/members" element={<Members />} />
+            <Route path="/officers" element={<Officer />} />
+
+            {/* Slot Booking */}
+            <Route path="/slot-booking" element={<SlotBooking />} />
             <Route path="/slot" element={<Slot />} />
             <Route path="/faq" element={<FAQ />} />
+            {/* Contact */}
+            <Route path="/contact" element={<Contact />} />
 
+            {/* Gallery (duplicate path removed, handled in /about/gallery) */}
+
+            {/* Catch-all */}
             <Route path="/about/mission" element={<Missionpage />} />
             <Route path="/about/our-history" element={<History />} />
             <Route path="/about/vision" element={<Page />} />
