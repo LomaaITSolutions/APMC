@@ -68,7 +68,7 @@ const QuickActions = () => {
 
   const quickLinks = [
     { title: "Application Forms", icon: FileText, url: "/downloads" },
-    { title: "Fee Structure", icon: FileText, url: "/downloads" },
+    { title: "Fee Structure", icon: FileText, url: "/services/doctor-login" },
     { title: "Guidelines & Rules", icon: Download, url: "/downloads" },
     { title: "Contact Directory", icon: Phone, url: "/contact" },
     { title: "Office Hours", icon: Clock, url: "/contact" },

@@ -20,6 +20,19 @@ import Gallery from "./pages/GalleryPage";
 import Officer from "./pages/Officer";
 import DownloadInfo from "./pages/Downloads";
 import SlotBooking from "./pages/Slot-Booking";
+import RegistrationAP from "./components/RegistrationAP";
+import RegistrationOtherState from "./components/RegistrationOtherState";
+import RegistrationOtherCountry from "./components/RegistrationOtherCountry";
+import PaymentIDCard from "./components/PaymentIDCard";
+import UploadEnclosures from "./components/UploadEnclosures";
+import BookSlot from "./components/BookSlot";
+import Details from "./components/Details";
+import DoctorRegister from './pages/DoctorRegister'
+import DoctorRegisterForm from './pages/Registerform'
+import DoctorLogin from "./pages/Doctor-login";
+import DoctorLoginPage from "./pages/Doctor-Login-page";
+import MedicalRegisterSearch from "./components/MedicalRegisterSearch";
+import Popup from "./components/Popup";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +47,20 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/registration/ap" element={<RegistrationAP />} />
+        <Route path="/registration-other-state" element={<RegistrationOtherState />} />
+        <Route path="/registration-other-country" element={<RegistrationOtherCountry />} />
+        <Route path="/payment-id-card" element={<PaymentIDCard />} />
+        <Route path="/upload-enclosures" element={<UploadEnclosures />} />
+        <Route path="/book-slot" element={<BookSlot />} />
+        <Route path="/details" element={<Details />} />
+        <Route path="/services/doctor-signup" element={<DoctorRegister />} />
+        <Route path="/services/doctor-signup/Form" element={<DoctorRegisterForm />} />
+        <Route path="/services/doctor-login" element={<DoctorLogin />} />
+        <Route path="/services/doctor-login-page" element={<DoctorLoginPage />} />
+        <Route path="/services/verify" element={<MedicalRegisterSearch />} />
+        <Route path="/popup" element={<Popup />} />
+
             <Route path="/register" element={<Registration />} />
             <Route path="/verify" element={<Verification />} />
             <Route path="/renewal" element={<Renewal />} />
