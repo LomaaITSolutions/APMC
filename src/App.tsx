@@ -20,7 +20,7 @@ import GalleryPage from "./pages/GalleryPage";
 import Officer from "./pages/Officer";
 import Members from "./pages/members";
 import MedicalRegisterSearch from "./pages/MedicalRegisterSearch";  
-import Register from "./pages/Registration";  
+// import Register from "./pages/Registration";  
 import DownloadInfo from "./pages/Downloads";
 import SlotBooking from "./pages/Slot-Booking";
 import RegistrationAP from "./components/RegistrationAP";
@@ -49,6 +49,9 @@ import FAQ from "./pages/Faq";
 
 // Special pages
 import ActsRulesPage from "./pages/act-rulespage";
+import History from "./pages/Historypage";
+import Page from "./pages/Visionpage";
+import Gallery from "./pages/Gallery";
 
 const queryClient = new QueryClient();
 
@@ -100,16 +103,16 @@ const App = () => (
               element={<DoctorLoginPage />}
             />
             <Route
-              path="/services/verify"
+              path="/verify"
               element={<MedicalRegisterSearch />}
             />
             <Route path="/popup" element={<Popup />} />
 
-            <Route path="/register" element={<Registration />} />
-            <Route path="/verify" element={<Verification />} />
+            <Route path="/register" element={<RegistrationAP />} />
+            {/* <Route path="/verify" element={<Verfi />} /> */}
             <Route path="/renewal" element={<Renewal />} />
             <Route path="/services/downloads" element={<DownloadInfo />} />
-            <Route path="/register" element={<Register />} />
+            {/* <Route path="/register" element={<Register />} /> */}
             <Route path="/verify" element={<MedicalRegisterSearch />} />
 
             {/* Registration / Renewal */}

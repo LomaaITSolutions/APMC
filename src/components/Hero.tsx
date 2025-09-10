@@ -81,7 +81,7 @@ const Hero = () => {
 
           <div className="space-y-4">
             <Card className="p-6 bg-white/95 backdrop-blur shadow-medical hover:shadow-lg transition-all hover:scale-105">
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4" onClick={() => (window.location.pathname = "/register")}>
                 <div className="w-12 h-12 bg-medical-blue rounded-lg flex items-center justify-center">
                   <FileCheck className="h-6 w-6 text-white" />
                 </div>

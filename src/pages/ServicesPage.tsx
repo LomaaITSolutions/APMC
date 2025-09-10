@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import Services from "@/components/Services";
+import Footer from "@/components/Footer";
 
 const ServicesPage = () => {
   return (
@@ -10,6 +11,7 @@ const ServicesPage = () => {
         <link rel="canonical" href="/services" />
       </Helmet>
       <Services />
+      <Footer />
     </main>
   );
 };
