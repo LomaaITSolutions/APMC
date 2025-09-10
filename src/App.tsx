@@ -20,6 +20,7 @@ import Gallery from "./pages/GalleryPage";
 import Officer from "./pages/Officer";
 import DownloadInfo from "./pages/Downloads";
 import SlotBooking from "./pages/Slot-Booking";
+import FAQ from "./pages/Faq";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +42,7 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/slot-Booking" element={<SlotBooking />} />
             <Route path="/slot" element={<Slot />} />
+            <Route path="/faq" element={<FAQ />} />
 
             <Route path="/about/mission" element={<Missionpage />} />
             <Route path="/about/our-history" element={<History />} />
