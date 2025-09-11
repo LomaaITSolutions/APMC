@@ -12,12 +12,12 @@ const Aboutsidebar = () => {
         </h2>
         <ul className="p-3 space-y-2 text-sm">
           <li>
-            <a href="#notifications" className="hover:text-primary">
+            <a href="/notifications" className="hover:text-primary">
               <span className="font-bold">{">"}</span> Notifications
             </a>
           </li>
           <li>
-            <a href="#members" className="hover:text-primary">
+            <a href="/officers/members" className="hover:text-primary">
               <span className="font-bold">{">"}</span> Members of APMC
             </a>
           </li>
@@ -32,7 +32,7 @@ const Aboutsidebar = () => {
             </a>
           </li>
            <li>
-            <a href="#downloads" className="hover:text-primary">
+            <a href="/services/downloads" className="hover:text-primary">
               <span className="font-bold">{">"}</span> Downloads
             </a>
           </li>
