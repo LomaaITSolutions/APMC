@@ -50,7 +50,7 @@ const Aboutsidebar = () => {
           <img src="https://t3.ftcdn.net/jpg/03/05/64/02/360_F_305640264_LQpbXjvsIj9IzDA8tfNAddTxBxYtLiYX.jpg" alt="APMC 3" className="rounded-md" />
           <img src="https://media.istockphoto.com/id/1285443833/photo/male-doctor-talking-to-group-of-people-on-presentation-in-the-hospital.jpg?s=612x612&w=0&k=20&c=QM1zk1tr5ZJfXuzHNJPWVhJ3H3dn7GvsrKC90d6TB8A=" alt="APMC 4" className="rounded-md" />
         </div>
-        <Link to="/gallery">
+        <Link to="/about/gallery">
   <p className="mt-2 text-md font-bold text-primary text-center cursor-pointer">
           View Gallery {">"}
         </p>    
